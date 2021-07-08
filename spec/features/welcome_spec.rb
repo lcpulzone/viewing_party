@@ -1,7 +1,7 @@
 # When a user visits the root path they should be on the welcome page which includes:
 require 'rails_helper'
 
-RSpec.describe "Welcome Page" do
+RSpec.describe "Welcome Index Page" do
   it "has a welcome message" do
     visit root_path
 
