@@ -19,6 +19,9 @@ RSpec.describe "Welcome Index Page" do
 
     expect(page).to have_button("Log In Here")
 
+    click_button("Log In Here")
+
+    expect(current_path).to eq(login_path)
   end
   #
   # it "has a link to registration" do
