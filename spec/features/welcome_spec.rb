@@ -23,8 +23,10 @@ RSpec.describe "Welcome Index Page" do
 
     expect(current_path).to eq(login_path)
   end
-  #
-  # it "has a link to registration" do
-  #   #stuff
-  # end
+
+  it "has a link to registration" do
+    visit root_path
+
+    expect(page).to have_link("Register Here", href: register_path)
+  end
 end
