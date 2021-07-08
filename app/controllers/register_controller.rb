@@ -8,7 +8,7 @@ class RegisterController < ApplicationController
   end
 
   def new
-
+    
   end
 
   def create
