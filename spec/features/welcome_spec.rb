@@ -13,10 +13,13 @@ RSpec.describe "Welcome Index Page" do
 
     expect(page).to have_content("Ya you view movies n stuff")
   end
-  #
-  # it "has a BUTTon to log in" do
-  #   #stuff
-  # end
+
+  it "has a BUTTon to log in" do
+    visit root_path
+
+    expect(page).to have_button("Log In Here")
+
+  end
   #
   # it "has a link to registration" do
   #   #stuff
