@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   post '/register', to: 'register#create'
 
   resources 'dashboard'
+
+  get '/discover', to: 'discover#index'
 end

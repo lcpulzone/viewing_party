@@ -24,4 +24,12 @@ RSpec.describe 'Dashboard Index page' do
 
     expect(page).to have_content("Action Movie Partiiiiessss")
   end
+
+  it 'when I click the discover movies button, it can redirect me to the discover page' do
+    visit dashboard_index_path
+
+    click_button('Discover Movies')
+
+    expect(current_path).to eq(discover_path)
+  end
 end
