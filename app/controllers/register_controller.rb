@@ -8,11 +8,11 @@ class RegisterController < ApplicationController
   end
 
   def new
-    
+
   end
 
   def create
-
+    redirect_to dashboard_index_path
   end
 
   def edit
