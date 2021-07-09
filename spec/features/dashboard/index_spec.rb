@@ -6,4 +6,10 @@ RSpec.describe 'Dashboard Index page' do
 
     expect(page).to have_content("Welcome!")  ###ADD IN INTERPOOOLATION
   end
+
+  it 'has a button to discover movies' do
+    visit dashboard_index_path
+
+    expect(page).to have_button("Discover Movies")
+  end
 end
