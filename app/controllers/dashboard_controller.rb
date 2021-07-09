@@ -1,6 +1,6 @@
-class RegisterController < ApplicationController
+class DashboardController < ApplicationController
   def index
-
+    
   end
 
   def show
@@ -12,7 +12,7 @@ class RegisterController < ApplicationController
   end
 
   def create
-    redirect_to dashboard_index_path
+
   end
 
   def edit

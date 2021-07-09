@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   get '/register', to: 'register#new'
   post '/register', to: 'register#create'
+
+  resources 'dashboard'
+
+  get '/discover', to: 'discover#index'
 end
