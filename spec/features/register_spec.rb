@@ -12,14 +12,13 @@ RSpec.describe 'New Register Page' do
   end
 
   it 'can redirect to the dashboard page after submitting registration' do
-    #tee hee
     visit register_path
 
-    fill_in 'Email', with: 'bob@bob.com'
-    fill_in 'Password', with: 'bobbobbob'
-    fill_in 'Confirm Password', with: 'bobbobbob'
-    click_button 'Register' 
+    fill_in 'email', with: 'bob@bob.com'
+    fill_in 'password', with: 'bobbobbob'
+    fill_in 'password_confirmation', with: 'bobbobbob'
+    click_button 'Register'
 
-    expect(current_path).to eq(dashboard_path)
+    expect(current_path).to eq(dashboard_index_path)
   end
 end
