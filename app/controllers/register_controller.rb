@@ -3,9 +3,18 @@ class RegisterController < ApplicationController
 
   def show; end
 
-  def new; end
+  def new
+    @user = User.new
+  end
 
   def create
+    user = user_params
+    user[:email] = user[:email.downcase]
+    new_user = User.create(user)
+    if new_user.save
+      session[:user_id] = new_user.id
+      flash[:success] = "Welcome, #{new_user.username}!"
+    end
     redirect_to dashboard_index_path
   end
 
@@ -15,8 +24,8 @@ class RegisterController < ApplicationController
 
   def destroy; end
 
-  # private
-  # def _params
-  #   params.permit(:)
-  # end
+  private
+  def user_params
+    params.require(:user).permit(:email, :password)
+  end
 end
