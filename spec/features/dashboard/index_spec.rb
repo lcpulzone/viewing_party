@@ -1,10 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe 'Dashboard Index page' do
+  before :each do
+    @user1 = User.create!(email: "ted@pet.com", password_digest: "asdf")
+    @user2 = User.create!(email: "hawk@pet.com", password_digest: "qwre")
+    @user3 = User.create!(email: "dalia@pet.com", password_digest: "zxcv")
+    @user4 = User.create!(email: "henny@pet.com", password_digest: "uiop")
+  end
+
   it 'can welcome the user' do
     visit dashboard_index_path
 
-    expect(page).to have_content("Welcome!")  ###ADD IN INTERPOOOLATION
+    expect(page).to have_content("Welcome #{@user4.email}!")  
   end
 
   it 'has a button to discover movies' do
