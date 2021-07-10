@@ -1,30 +1,17 @@
 class WelcomeController < ApplicationController
-  def index
-    
-  end
+  def index; end
 
-  def show
+  def show; end
 
-  end
+  def new; end
 
-  def new
+  def create; end
 
-  end
+  def edit; end
 
-  def create
-
-  end
-
-  def edit
-
-  end
-
-  def update
-
-  end
+  def update; end
 
   def destroy
-
   end
   #
   # private
