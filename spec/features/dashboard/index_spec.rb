@@ -9,9 +9,10 @@ RSpec.describe 'Dashboard Index page' do
   end
 
   it 'can welcome the user' do
+    #Login first!!
     visit dashboard_index_path
 
-    expect(page).to have_content("Welcome #{@user4.email}!")  
+    expect(page).to have_content("Welcome #{@user4.email}!")
   end
 
   it 'has a button to discover movies' do
