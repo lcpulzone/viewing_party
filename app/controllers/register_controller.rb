@@ -1,31 +1,19 @@
 class RegisterController < ApplicationController
-  def index
+  def index; end
 
-  end
+  def show; end
 
-  def show
-
-  end
-
-  def new
-
-  end
+  def new; end
 
   def create
     redirect_to dashboard_index_path
   end
 
-  def edit
+  def edit; end
 
-  end
+  def update; end
 
-  def update
-
-  end
-
-  def destroy
-
-  end
+  def destroy; end
 
   # private
   # def _params

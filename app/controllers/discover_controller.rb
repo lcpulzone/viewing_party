@@ -1,31 +1,17 @@
 class DiscoverController < ApplicationController
-  def index
+  def index; end
 
-  end
+  def show; end
 
-  def show
+  def new; end
 
-  end
+  def create; end
 
-  def new
+  def edit; end
 
-  end
+  def update; end
 
-  def create
-
-  end
-
-  def edit
-
-  end
-
-  def update
-
-  end
-
-  def destroy
-
-  end
+  def destroy; end
 
   # private
   # def _params

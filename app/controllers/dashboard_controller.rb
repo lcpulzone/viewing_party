@@ -1,31 +1,17 @@
 class DashboardController < ApplicationController
-  def index
-    
-  end
+  def index; end
 
-  def show
+  def show; end
 
-  end
+  def new; end
 
-  def new
+  def create; end
 
-  end
+  def edit; end
 
-  def create
+  def update; end
 
-  end
-
-  def edit
-
-  end
-
-  def update
-
-  end
-
-  def destroy
-
-  end
+  def destroy; end
 
   # private
   # def _params
