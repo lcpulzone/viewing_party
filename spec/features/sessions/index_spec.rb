@@ -3,10 +3,10 @@ require 'rails_helper'
 
 RSpec.describe "Sessions Index Page" do
   before :each do
-    @user1 = User.create!(email: "ted@pet.com", password_digest: "asdf")
-    @user2 = User.create!(email: "hawk@pet.com", password_digest: "qwre")
-    @user3 = User.create!(email: "dalia@pet.com", password_digest: "zxcv")
-    @user4 = User.create!(email: "henny@pet.com", password_digest: "uiop")
+    @user1 = User.create!(email: "ted@pet.com", password: "asdf")
+    @user2 = User.create!(email: "hawk@pet.com", password: "qwre")
+    @user3 = User.create!(email: "dalia@pet.com", password: "zxcv")
+    @user4 = User.create!(email: "henny@pet.com", password: "uiop")
   end
 
   it "has a welcome message" do
@@ -29,10 +29,10 @@ RSpec.describe "Sessions Index Page" do
     expect(page).to have_button("Login")
 
     fill_in 'email', with: "#{@user2.email}"
-    fill_in 'password', with: "#{@user2.password_digest}"
+    fill_in 'password', with: "#{@user2.password}"
     click_button("Login")
 
-    expect(current_path).to eq(login_path)
+    expect(current_path).to eq(dashboard_index_path)
   end
 
   it "has a link to registration" do
