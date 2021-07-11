@@ -1,4 +1,4 @@
-class RegisterController < ApplicationController
+class UsersController < ApplicationController
   def index; end
 
   def show; end
@@ -9,13 +9,13 @@ class RegisterController < ApplicationController
 
   def create
     user = user_params
-    user[:email] = user[:email.downcase]
-    new_user = User.create(user)
-    if new_user.save
+    user[:email] = user[:email].downcase
+    new_user = User.create!(user)
+    if new_user.save!
       session[:user_id] = new_user.id
-      flash[:success] = "Welcome, #{new_user.username}!"
+      flash[:success] = "Welcome, #{new_user.email}!"
+      redirect_to dashboard_index_path
     end
-    redirect_to dashboard_index_path
   end
 
   def edit; end

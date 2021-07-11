@@ -1,0 +1,13 @@
+<h1>Thanks for visiting Viewing Party</h1>
+
+<h4>Ya you view movies n stuff</h4>
+
+<%= form_with url: '/login', method: :post, local: true do |f| %>
+  <%= f.label :email, 'Email:' %>
+  <%= f.text_field :email %><br/><br/>
+  <%= f.label :password, 'Password:' %>
+  <%= f.password_field :password %><br/><br/>
+  <%= f.submit 'Login' %>
+<% end %>
+
+<%= link_to "Register Here", register_path %>
