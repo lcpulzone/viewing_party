@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   resources 'dashboard'
 
-  get '/discover', to: 'discover#index'
+  get '/discovermovies', to: 'movies#index'
 end
