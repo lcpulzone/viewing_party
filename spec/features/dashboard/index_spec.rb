@@ -67,6 +67,6 @@ RSpec.describe 'Dashboard Index page' do
 
     click_button('Discover Movies')
 
-    expect(current_path).to eq(discover_path)
+    expect(current_path).to eq(discovermovies_path)
   end
 end
