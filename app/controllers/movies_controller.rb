@@ -1,7 +1,9 @@
 class MoviesController < ApplicationController
   def index; end
 
-  def show; end
+  def show
+    @top40movies = MovieFacade.top_40_movies
+  end
 
   def new; end
 

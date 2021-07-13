@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   resources 'dashboard'
 
   get '/discovermovies', to: 'movies#index'
-  post '/top40movies', to: 'movies#show'
+  get '/top40movies', to: 'movies#show'
 end
