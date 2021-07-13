@@ -22,10 +22,6 @@ RSpec.describe 'Movies Discover Page' do
   end
 end
 
-gonna grab a beer - hope thats ok
-Totes, I will be eating dinner here soon
-
-
 # As an authenticated user,
 # When I visit the '/discover' path
 # I should see
