@@ -5,6 +5,6 @@ RSpec.describe "Movies Show Page" do
     visit top40movies_path
 
     expect(page).to have_content("Top 40 Movies")
-    expect(page).to have_content("The Shawshank Redemption")
+    expect(page).to have_content("The Shawshank Redemption") 
   end
 end

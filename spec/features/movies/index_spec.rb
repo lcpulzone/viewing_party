@@ -15,12 +15,16 @@ RSpec.describe 'Movies Discover Page' do
     expect(current_path).to eq(top40movies_path)
   end
 
-  xit 'has a form to search for movies' do
+  it 'has a form to search for movies' do
     visit discovermovies_path
 
-    expect(page).to have_content()
+    expect(page).to have_content("Search For Movie")
   end
 end
+
+gonna grab a beer - hope thats ok
+Totes, I will be eating dinner here soon
+
 
 # As an authenticated user,
 # When I visit the '/discover' path
