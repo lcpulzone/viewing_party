@@ -5,6 +5,10 @@ class MoviesController < ApplicationController
     @top40movies = MovieFacade.top_40_movies
   end
 
+  def search
+    @movies_result = MovieFacade.movie_results(params[:search])
+  end
+
   def new; end
 
   def create; end

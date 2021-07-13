@@ -9,6 +9,11 @@ class MovieService
     parse_json(response)
   end
 
+  def self.search_movie_results(movie)
+    response = conn.get("search/movie?api_key=#{ENV['tmdb_key']}&language=en-US&query=#{movie}&page=1&include_adult=false")
+    parse_json(response)
+  end
+
   def self.conn
     Faraday.new(url: "https://api.themoviedb.org/3/")
   end
