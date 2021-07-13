@@ -11,6 +11,7 @@ require 'rails_helper'
         expect(current_path).to eq(search_path)
 
         expect(page).to have_content("Caddyshack")
+        expect(page).to have_content(6.7)
       end
     end
  end

@@ -1,0 +1,6 @@
+<h1>Your Movie Search Results</h1>
+
+<% @movies_result.each do |movie| %>
+  <p>Movie Title: <%= movie[:title] %></p>
+  <p>Vote Average: <%= movie[:vote_average] %></p><br>
+<% end %>
