@@ -2,8 +2,6 @@ class MovieService
   def self.get_top_40_movies_part_1
     response = conn.get("movie/top_rated?api_key=#{ENV['tmdb_key']}&language=en-US&page=1")
     parse_json(response)
-
-    binding.pry
   end
 
   def self.get_top_40_movies_part_2

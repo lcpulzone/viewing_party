@@ -2,9 +2,17 @@ require 'rails_helper'
 
 describe MovieService do
   describe "class methods" do
-    describe "#get_top40_movies_part_1" do
+    describe "#get_top_40_movies_part_1" do
       it 'returns the first 20 movies of the top trending movies' do
         expect(MovieService.get_top_40_movies_part_1.class).to eq(Hash)
+        expect(MovieService.get_top_40_movies_part_1[:results].count).to eq(20)
+      end
+    end
+
+    describe "#get_top_40_movies_part_2" do
+      it 'returns the second 20 movies of the top trending movies' do
+        expect(MovieService.get_top_40_movies_part_2.class).to eq(Hash)
+        expect(MovieService.get_top_40_movies_part_2[:results].count).to eq(20)
       end
     end
   end
