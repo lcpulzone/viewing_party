@@ -42,6 +42,8 @@ RSpec.describe 'Dashboard Index page' do
     visit dashboard_index_path
 
     expect(page).to have_content("Friends")
+    expect(page).to have_content("Search for friends")
+    expect(page).to have_button("Find Friend")
   end
 
   it 'has a section for parties' do
