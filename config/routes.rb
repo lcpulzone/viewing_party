@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   get '/discovermovies', to: 'movies#index'
   get '/top40movies', to: 'movies#show'
+
+  post '/search', to: 'movies#search'
 end

@@ -18,7 +18,12 @@ RSpec.describe 'Movies Discover Page' do
   it 'has a form to search for movies' do
     visit discovermovies_path
 
-    expect(page).to have_content("Search For Movie")
+    expect(page).to have_content("Search for movies")
+
+    fill_in :search, with: "caddyshack"
+    click_button 'Search'
+
+    expect(current_path).to eq(search_path)
   end
 end
 
