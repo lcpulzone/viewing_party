@@ -10,7 +10,7 @@
 
 <% if @movies_result %>
   <% @movies_result.each do |movie| %>
-    <p>Movie Title: <%= movie[:title] %></p>
+    <p>Movie Title: <%= link_to movie[:title], moviedetails_path %></p>
     <p>Vote Average: <%= movie[:vote_average] %></p><br>
   <% end %>
 <% end %>
