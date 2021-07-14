@@ -9,6 +9,10 @@ class MoviesController < ApplicationController
     @movies_result = MovieFacade.movie_results(params[:search])
   end
 
+  def details
+    
+  end
+
   def new; end
 
   def create; end
