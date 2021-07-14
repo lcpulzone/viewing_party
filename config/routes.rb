@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   post '/users', to: 'users#create'
 
   get '/dashboard', to: 'dashboard#index', as: 'dashboard_index'
-  post '/dashboard', to: 'dashboard#show'
+  # post '/dashboard', to: 'dashboard#show'
+
+  post '/friendships', to: 'friendships#create'
 
   get '/discovermovies', to: 'movies#index'
   get '/top40movies', to: 'movies#show'

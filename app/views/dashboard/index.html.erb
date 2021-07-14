@@ -2,11 +2,21 @@
 
 <%= button_to "Discover Movies", discovermovies_path, method: :get %>
 
-<h2>Friends</h2>
-<%= form_with url: '/dashboard', method: :post, local: true do |form|  %>
+<h2>Find Friends</h2>
+<%= form_with url: '/friendships', method: :post, local: true do |form|  %>
   <%= form.label 'Search For Friends' %>
   <%= form.text_field :search %>
   <%= form.submit 'Find Friend' %>
 <% end %>
+
+<h2>Friends List:</h2>
+<% if current_user.friends.empty? %>
+  <p>You don't have any friends - Bummer Buddy!</p>
+<% else %>
+  <% current_user.friends.each do |friend| %>
+    <%= friend.email %>
+  <% end %>
+<% end %>
+
 
 <h2>Action Movie Partiiiiessss</h2>
