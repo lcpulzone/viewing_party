@@ -8,8 +8,7 @@ script:
 - bundle exec rspec
 deploy:
   provider: heroku
-  api_key:
-    secure: Q7esPqDpn0SmwYmvJgwcL+zt3veaOzoSjC3skCBVucNHt6U27yGnN986pYuNulIN9NvZdd6q2WBpzAulZHWuBmnNuay4gGJ5Eb+mmCJoHkpPlkq2xoqGNQqRiovcd3M50gknlFqHmBRJfuLWf6VkUAdg5X06KV2rtUHEoCBJCVZb8IOfC9kzddXC9KwNwX8v5QPEuUv/jBAPxgpIRy/ICTYGMRWZwPB9XuZVzGO9eQYfm7FZ5tIvUa5xH84wm2DYJXZNkM+v410voxbeiyGe+vugRaxIwf6BmRuyEcvKAQkO1jW9yVKpJXB50CNDBtanI1oHl5Ou+cEBFSmIhm2ZGp8NvfRaBKXOomOoQJ2IWL9BodpopPYvV+5Sz6BFrO5DUUYg+oOOOLSx4B4iZaaOdthVB+MBfNcfKAUOUI8SeBCnAz5ED6KOl213Nqsgm3NC/uJ9H7OGOQtvx7klV9ei3WbrwSm0aKFQJzu7ive41RwGm0efdd9yPukibYJakpiTKesDPb97gsXck1a52YLV6UzQaOW6Y+dGrwJLqW4QX9aTgBjHu3FwrrB3ASBqQ6/a/KaXo8/2OJtt0YdThPb2V6quywbgV4tuVOT+ftQMKWwqFAU9oa7EzTqbZZCnBi73PNq08VVJz6OIRS6I+iCaKc55INhecsmhi+/tPTHgGRM=
+  api_key: $HEROKU_API_KEY
   app: konleigh-viewing-party
   on:
     repo: lcpulzone/viewing_party
