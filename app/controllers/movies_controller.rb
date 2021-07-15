@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   end
 
   def details
+    @basedetails = MovieFacade.find_base_movie_details_by_movie(params[:id])
     
   end
 
