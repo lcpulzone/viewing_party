@@ -7,9 +7,8 @@ class MovieFacade
     MovieService.search_movie_results(movie)[:results]
   end
 
-  def self.find_base_movie_details_by_movie(movie)
-    MovieService.search_movie_results(movie)[:results].map do |movie_data|
+  def self.find_base_movie_details_by_movie(id)
+    movie_data = MovieService.find_movie(id)
       MovieDetails.new(movie_data)
-    end
   end
 end

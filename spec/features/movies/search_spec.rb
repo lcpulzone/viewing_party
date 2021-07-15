@@ -21,7 +21,7 @@ RSpec.describe "Movies Search Result Page" do
 
     expect(current_path).to eq(search_path)
 
-    expect(page).to have_link("Caddyshack", href: moviedetails_path)
+    expect(page).to have_link("Caddyshack", href: "/moviedetails?id=11977")
   end
 
   it 'has a form to search for more movies' do
