@@ -19,4 +19,6 @@ Rails.application.routes.draw do
 
   get '/search', to: 'movies#search'
   post '/search', to: 'movies#search'
+
+  get 'new_viewing_party', to: 'parties#index'
 end
