@@ -11,4 +11,9 @@ class MovieFacade
     movie_data = MovieService.find_movie(id)
       MovieDetails.new(movie_data)
   end
+
+  def self.find_runtime_and_genre(id)
+    movie_data = MovieService.runtime_genre(id)
+    MovieDetails.new(movie_data)
+  end
 end

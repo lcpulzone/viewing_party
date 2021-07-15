@@ -35,6 +35,7 @@ describe MovieService do
       it 'returns the movie results' do
         expect(MovieService.runtime_genre(10681).class).to eq(Hash)
         expect(MovieService.runtime_genre(10681)[:runtime]).to eq(98)
+        require "pry";binding.pry
       end
     end
 
