@@ -1,5 +1,7 @@
 <h1>The Deets</h1>
 
+  <%= button_to "Create A Viewing Party With This Movie!", new_viewing_party_path, params: {}, method: :post %>
+
   <h4>Title: <%= @basedetails.title %></h4>
   <h4>Overview: <%= @basedetails.overview %></h4>
   <h4>Vote Average: <%= @basedetails.vote_average %></h4>
