@@ -19,11 +19,6 @@ class MovieService
     parse_json(response)
   end
 
-  def self.runtime_genre(id)
-    response = conn.get("movie/#{id}?api_key=#{ENV['tmdb_key']}&language=en-US")
-    parse_json(response)
-  end
-
   def self.review_info(id)
     response = conn.get("movie/#{id}/reviews?api_key=#{ENV['tmdb_key']}&language=en-US&page=1")
     parse_json(response)

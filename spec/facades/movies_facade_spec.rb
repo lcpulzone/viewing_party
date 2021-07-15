@@ -12,21 +12,14 @@ describe 'MoviesFacade' do
   end
 
   it 'can find the details of a movie' do
-    expect(MovieFacade.find_base_movie_details_by_movie(10681).id).to eq(10681)
-    expect(MovieFacade.find_base_movie_details_by_movie(10681).class).to eq(MovieDetails)
-    expect(MovieFacade.find_base_movie_details_by_movie(10681).title).to eq("WALL·E")
-    expect(MovieFacade.find_base_movie_details_by_movie(10681).vote_average).to eq(8)
+    expect(MovieFacade.find_movie_details(10681).class).to eq(Hash)
   end
 
-  xit 'can find the runetime and genre' do
-    expect(MovieFacade.find_runtime_and_genre(10861).run_time_min).to eq(98)
+  it 'can find the reviews of a movie' do
+    expect(MovieFacade.find_reviews(10681).class).to eq(Hash)
+  end
+
+  it 'can be one hash' do
+    expect(MovieFacade.all_movie_details(10681).class).to eq(MovieDetails)
   end
 end
-
-# no access:
-# run_time hr
-# run_time min
-# genre
-# first 10 cast members
-# review's author
-# review's info

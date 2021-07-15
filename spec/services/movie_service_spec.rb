@@ -31,14 +31,6 @@ describe MovieService do
       end
     end
 
-    describe "#runtime_genre(id)" do
-      it 'returns the movie results' do
-        expect(MovieService.runtime_genre(10681).class).to eq(Hash)
-        expect(MovieService.runtime_genre(10681)[:runtime]).to eq(98)
-        require "pry";binding.pry
-      end
-    end
-
     describe "#review_info(id)" do
       it 'returns the movie results' do
         expect(MovieService.review_info(10681).class).to eq(Hash)
