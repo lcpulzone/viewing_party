@@ -23,5 +23,33 @@ describe MovieService do
         expect(MovieService.search_movie_results("the daRk Knight")[:results][0][:release_date]).to eq("2008-07-16")
       end
     end
+
+    describe "#find_movie(id)" do
+      it 'returns the movie results' do
+        expect(MovieService.find_movie(10681).class).to eq(Hash)
+        expect(MovieService.find_movie(10681)[:title]).to eq("WALL·E")
+      end
+    end
+
+    describe "#runtime_genre(id)" do
+      it 'returns the movie results' do
+        expect(MovieService.runtime_genre(10681).class).to eq(Hash)
+        expect(MovieService.runtime_genre(10681)[:runtime]).to eq(98)
+      end
+    end
+
+    describe "#review_info(id)" do
+      it 'returns the movie results' do
+        expect(MovieService.review_info(10681).class).to eq(Hash)
+        expect(MovieService.review_info(10681)[:results][1][:author]).to eq("Kamurai")
+      end
+    end
+
+    describe "#cast_member_info(id)" do
+      it 'returns the movie results' do
+        expect(MovieService.cast_member_info(10681).class).to eq(Hash)
+        expect(MovieService.cast_member_info(10681)[:cast][0][:name]).to eq("Ben Burtt")
+      end
+    end
   end
 end
