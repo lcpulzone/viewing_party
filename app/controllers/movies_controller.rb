@@ -9,6 +9,11 @@ class MoviesController < ApplicationController
     @movies_result = MovieFacade.movie_results(params[:search])
   end
 
+  def details
+    @basedetails = MovieFacade.find_base_movie_details_by_movie(params[:id])
+    
+  end
+
   def new; end
 
   def create; end

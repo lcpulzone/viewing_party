@@ -13,6 +13,17 @@ RSpec.describe "Movies Search Result Page" do
     expect(page).to have_content(6.7)
   end
 
+  it 'has a link as its name' do
+    visit discovermovies_path
+
+    fill_in :search, with: "caddyshack"
+    click_button 'Search'
+
+    expect(current_path).to eq(search_path)
+
+    expect(page).to have_link("Caddyshack", href: moviedetails_path)
+  end
+
   it 'has a form to search for more movies' do
     visit search_path
 

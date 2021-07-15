@@ -1,6 +1,6 @@
 <h1>Your Movie Search Results</h1>
 
-<%= button_to "Top 40 Rated Movies", top40movies_path, method: :get %>
+<%= button_to "Top 40 Rated Movies", top40movies_path, method: :get %><br>
 
 <%= form_with url: search_path, method: :post, local: true do |form|  %>
   <%= form.label 'Search For Movies' %>
@@ -10,7 +10,7 @@
 
 <% if @movies_result %>
   <% @movies_result.each do |movie| %>
-    <p>Movie Title: <%= movie[:title] %></p>
-    <p>Vote Average: <%= movie[:vote_average] %></p><br>
+    <p>Movie Title: <%= link_to movie[:title], "/moviedetails?id=#{movie[:id]}" %></p>
+    <p>Vote Average: <%= movie[:vote_average] %></p>
   <% end %>
 <% end %>

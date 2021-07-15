@@ -10,4 +10,18 @@ describe 'MoviesFacade' do
     expect(MovieFacade.movie_results("wALL-E").class).to eq(Array)
     expect(MovieFacade.movie_results("WALL-E")[0][:vote_average]).to eq(8)
   end
+
+  it 'can find the details of a movie' do
+    expect(MovieFacade.find_base_movie_details_by_movie("WALL-E").class).to eq(Array)
+    expect(MovieFacade.find_base_movie_details_by_movie("WALL-E")[0].title).to eq("WALL·E")
+    expect(MovieFacade.find_base_movie_details_by_movie("WALL-E")[0].vote_average).to eq(8)
+  end
 end
+
+# no access:
+# run_time hr
+# run_time min
+# genre
+# first 10 cast members
+# review's author
+# review's info
