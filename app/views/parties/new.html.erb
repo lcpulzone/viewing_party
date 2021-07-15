@@ -1,0 +1,10 @@
+<h1>New Viewing Party</h1>
+
+<%= form_with url: new_viewing_party_path, method: :post, local: true do |form|  %>
+  <%= form.label 'Movie Title:' %>
+  <%= form.label 'Duration of Party:' %>
+  <%= form.label 'Day:' %>
+  <%= form.label 'Start Time:' %>
+  <%= form.label 'Include Friends:' %>
+  <%= form.submit 'Create Viewing Party' %>
+<% end %>
