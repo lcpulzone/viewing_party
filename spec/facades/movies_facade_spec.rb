@@ -12,9 +12,14 @@ describe 'MoviesFacade' do
   end
 
   it 'can find the details of a movie' do
+    expect(MovieFacade.find_base_movie_details_by_movie(10681).id).to eq(10681)
     expect(MovieFacade.find_base_movie_details_by_movie(10681).class).to eq(MovieDetails)
     expect(MovieFacade.find_base_movie_details_by_movie(10681).title).to eq("WALL·E")
     expect(MovieFacade.find_base_movie_details_by_movie(10681).vote_average).to eq(8)
+  end
+
+  xit 'can find the runetime and genre' do
+    expect(MovieFacade.find_runtime_and_genre(10861).run_time_min).to eq(98)
   end
 end
 
