@@ -12,9 +12,9 @@ describe 'MoviesFacade' do
   end
 
   it 'can find the details of a movie' do
-    expect(MovieFacade.find_base_movie_details_by_movie("WALL-E").class).to eq(Array)
-    expect(MovieFacade.find_base_movie_details_by_movie("WALL-E")[0].title).to eq("WALL·E")
-    expect(MovieFacade.find_base_movie_details_by_movie("WALL-E")[0].vote_average).to eq(8)
+    expect(MovieFacade.find_base_movie_details_by_movie(10681).class).to eq(MovieDetails)
+    expect(MovieFacade.find_base_movie_details_by_movie(10681).title).to eq("WALL·E")
+    expect(MovieFacade.find_base_movie_details_by_movie(10681).vote_average).to eq(8)
   end
 end
 
