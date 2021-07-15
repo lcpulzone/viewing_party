@@ -1,8 +1,6 @@
 class SessionsController < ApplicationController
   def index; end
 
-  def show; end
-
   def new; end
 
   def create
@@ -17,17 +15,8 @@ class SessionsController < ApplicationController
     end
   end
 
-  def edit; end
-
-  def update; end
-
   def destroy
     session[:user_id] = nil
     redirect_to '/'
   end
-
-  # private
-  # def _params
-  #   params.permit(:)
-  # end
 end

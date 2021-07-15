@@ -30,7 +30,7 @@ class MovieService
   end
 
   def self.conn
-    Faraday.new(url: "https://api.themoviedb.org/3/")
+    Faraday.new(url: 'https://api.themoviedb.org/3/')
   end
 
   def self.parse_json(response)
