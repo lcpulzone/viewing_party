@@ -17,6 +17,6 @@ RSpec.describe 'Movie Details Page' do
     visit "/moviedetails?id=11977"
 
     expect(page).to have_content("Caddyshack")
-    save_and_open_page
+    
   end
 end
