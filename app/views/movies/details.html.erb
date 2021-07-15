@@ -1,1 +1,8 @@
 <h1>The Deets</h1>
+
+<% @basedetails.each do |detail| %>
+  <%= detail.title %>
+  <%= detail.overview %>
+  <%= detail.vote_average %>
+  <%= detail.vote_count %>
+<% end %>
